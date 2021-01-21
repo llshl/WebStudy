@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id='t1' class='kr.co.softcampus.beans.TestBean'>
+		<!-- 제네릭이 String인 List -->
+		<property name="list1">
+			<list>
+				<value>문자열1</value>
+				<value>문자열2</value>
+				<value>문자열3</value>
+			</list>
+		</property>
+		
+		<!-- 제네릭이 Integer인 List -->
+		<property name="list2">
+			<list>
+				<value type="int">100</value>
+				<value type="int">200</value>
+				<value type="int">300</value>
+			</list>
+		</property>
+		
+		<!-- 제네릭이 객체인 List -->
+		<property name="list3">
+			<list>
+				<bean class="kr.co.softcampus.beans.DataBean"/>
+				<bean class="kr.co.softcampus.beans.DataBean"/>
+				<ref bean="data_bean"/>
+				<ref bean="data_bean"/>
+				<ref bean="data_bean"/>
+				<ref bean="data_bean"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="data_bean" class="kr.co.softcampus.beans.DataBean" scope="prototype"/>
+	
+	
+</beans>

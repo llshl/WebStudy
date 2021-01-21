@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id='obj1' class='kr.co.softcampus.beans.TestBean' lazy-init="true"/>
+	<bean id='obj2' class='kr.co.softcampus.beans.TestBean' lazy-init="true">
+		<constructor-arg value="120"></constructor-arg>
+	</bean>
+	<bean id='obj3' class='kr.co.softcampus.beans.TestBean' lazy-init="true">
+		<constructor-arg value="11.12"></constructor-arg>
+	</bean>
+	<bean id='obj4' class='kr.co.softcampus.beans.TestBean' lazy-init="true">
+		<constructor-arg value="무운자열"></constructor-arg>
+	</bean>
+	<bean id='obj5' class='kr.co.softcampus.beans.TestBean' lazy-init="true">
+		<constructor-arg value="15" type="int"/>
+		<constructor-arg value="17.777" type="double"/>
+		<constructor-arg value="무운자열" type="java.lang.String"/>
+	</bean>
+	<bean id='obj6' class='kr.co.softcampus.beans.TestBean2' lazy-init="true">
+		<constructor-arg>
+			<bean class="kr.co.softcampus.beans.DataBean"/>
+		</constructor-arg>
+		<constructor-arg>
+			<bean class="kr.co.softcampus.beans.DataBean"/>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="thisone" class="kr.co.softcampus.beans.DataBean" scope="prototype"/>
+	<bean id='obj7' class='kr.co.softcampus.beans.TestBean2' lazy-init="true">
+		<constructor-arg ref="thisone"/>
+		<constructor-arg ref="thisone"/>
+	</bean>
+	
+</beans>

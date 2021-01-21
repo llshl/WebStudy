@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans.xsd
+							http://www.springframework.org/schema/context
+							http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- 지정된 패키지 안에있는 Bean클래스들의 어노테이션을 분석하도록 지정한다 -->
+	<context:component-scan base-package="kr.co.softcampus.beans2"/>
+	
+	<!-- id설정안한 이유는 TestBean1타입이 한개뿐이므로 id없어도 식별가능 -->
+	<bean class='kr.co.softcampus.beans.TestBean1'/>	
+	<bean id='xml2' class='kr.co.softcampus.beans.TestBean2'/>
+	<bean id='xml3' class='kr.co.softcampus.beans.TestBean2'/>
+</beans>

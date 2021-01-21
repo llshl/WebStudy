@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id='obj1' class='kr.co.softcampus.beans.TestBean1'>
+		<property name="data1" ref="data_bean1"/>
+		<property name="data2" ref="data_bean1"/>
+	</bean>
+	
+	<bean id="data_bean1" class='kr.co.softcampus.beans.DataBean1' scope="prototype"/>
+	
+	<bean id='obj2' class='kr.co.softcampus.beans.TestBean1' autowire="byName"/>
+	<bean id='data1' class='kr.co.softcampus.beans.DataBean1'/>
+	<bean id='data2' class='kr.co.softcampus.beans.DataBean1'/>
+	
+	<bean id='data_bean2' class='kr.co.softcampus.beans.TestBean2' autowire="byType"/>
+	<bean class='kr.co.softcampus.beans.DataBean2'/>
+	
+	<bean id='obj4' class='kr.co.softcampus.beans.TestBean3'>
+		<constructor-arg ref="data_bean2" index="0"></constructor-arg>
+		<constructor-arg ref="data_bean2" index="1"></constructor-arg>
+	</bean>
+</beans>
