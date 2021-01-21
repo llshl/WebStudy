@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans.xsd
+							http://www.springframework.org/schema/context
+							http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Bean클래스에 설정되어있는 어노테이션을 이용한다 -->
+	<context:annotation-config/>
+	
+	<!-- 빈 등록 -->
+	<bean id="xml1" class="kr.co.softcampus.beans.TestBean1"/>
+	<bean class="kr.co.softcampus.beans.DataBean1"/>
+	
+	<bean id="obj4" class="kr.co.softcampus.beans.DataBean2"/>
+	<bean id="obj5" class="kr.co.softcampus.beans.DataBean2"/>
+	
+	<bean id="xml2" class="kr.co.softcampus.beans.TestBean2"/>
+	
+	<bean class="kr.co.softcampus.beans.DataBean3"/>
+	<bean class="kr.co.softcampus.beans.DataBean4"/>
+</beans>
