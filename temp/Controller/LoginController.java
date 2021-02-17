@@ -51,7 +51,7 @@ public class LoginController {
 
 
     //로그인폼으로
-    @GetMapping("/loginForm") //index에서 로그인버튼 눌리면 이거가 실행됨
+    @GetMapping("/loginForm")
     public String toLoginForm(Model model){
         model.addAttribute("loginForm", new LoginForm()); //MemberForm이라는 객체를 보내줌. 여기에 회원정보 담기위해
         log.info("toLoginForm");
