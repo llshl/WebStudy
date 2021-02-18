@@ -41,7 +41,7 @@ import java.util.List;
 public class LoginController {
 
     private final MemberService memberService;
-    BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAID7ORZRGXAVUBEXA", "AXgZBzrc/y4KzejD35GLZomcjYkm/dti40s642hE");
+    BasicAWSCredentials awsCreds = new BasicAWSCredentials("key", "key");
     private final AmazonS3 s3 = AmazonS3ClientBuilder.standard()
         .withRegion(Regions.fromName("ap-northeast-2"))
         .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
