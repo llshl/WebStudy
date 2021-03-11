@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:mysql://aws2-rds.c27gjtnku3g9.ap-northeast-2.rds.amazonaws.com:3306/Member
-    username: llshl
-    password: jh18821882
+    username: name
+    password: pw
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   servlet:
