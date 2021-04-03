@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.5.22/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="exmaple" id="exmaple"
+        v-model.trim="inputValue">
+        <p>{{ inputValue}}</p>
+
+        <select name="example-select" id="example-select"
+        v-model="selectValue">
+            <option value="hello">hello</option>
+            <option value="world">world</option>
+        </select>
+    </div>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data: {
+                inputValue : "",
+                selectValue : null
+            }
+        })
+    </script>
+</body>
+</html>

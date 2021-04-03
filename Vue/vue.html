@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.5.22/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div>{{message}}</div>
+    </div>
+    <script>
+        //뷰 객체 생성 
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                message:""
+            },
+            created(){      //준비되면 message변수에 문자열 넣는다
+                this.message="Hello World";
+            }
+        })
+    </script>
+</body>
+</html>

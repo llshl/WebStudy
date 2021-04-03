@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.5.22/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-on:copy.prevent="isCopied">중요한 정보</p>
+    </div>
+    <script>
+        //copy 이벤트 막기
+        let vm = new Vue({  //뷰모델 생성
+            el:"#app",      //app에 들어감
+            methods: {         //이게들어감
+                isCopied(){
+                    alert("저작권법 위반입니다.");
+                }
+            }
+        })
+    </script>
+</body>
+</html>

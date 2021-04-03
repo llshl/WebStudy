@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.5.22/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item, index) in items" :key="index">{{item}}</li>     <!--for문처럼 출력--> <!--index는 순서유지를 위함-->
+        </ul>
+    </div>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data: {
+                items: ["hello","Vue","from","goorm"]
+            },
+            methods: {
+                enterKeyPressed(){
+                    alert("입력이 완료되었습니다");
+                }
+            }
+        })
+    </script>
+</body>
+</html>

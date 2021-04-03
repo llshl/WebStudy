@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.5.22/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="example" id="example" 
+            v-model="inputValue"                
+            v-on:keydown.enter="enterKeyPressed">    
+        <!--여기에 적는 문자열이 p태그에 실시간으로 반영됨, v-on은 콜백함수 지정하기, 엔터키 키다운되면 enterKetpressed콜백함수 수행-->
+        
+        <p>{{inputValue}}</p>
+    </div>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data: {
+                inputValue : ""
+            },
+            methods: {
+                enterKeyPressed(){
+                    alert("입력이 완료되었습니다");
+                }
+            }
+        })
+    </script>
+</body>
+</html>
